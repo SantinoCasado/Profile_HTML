@@ -1,41 +1,51 @@
-/* Aplica a todos los enlaces */
-a {
-  color: cyan;
+/* Aplica a los enlaces con clase .a_nav */
+.a_nav {
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Hover = cuando pasás el mouse */
-a:hover {
-  color: yellow;
-  text-decoration: underline;
+/* Personaliza la lista ul con clase .ul_description */
+.ul_description {
+  color: black;
+  list-style-position: inside;
 }
 
-/* Tambien se puede agregar clases si querés estilos
-distintos para GitHub y LinkedIn, para ello en el
-<a> de cada link agregarias:
-
-<a href="..." class="github-link">Click here</a>
-<a href="..." class="linkedin-link">Click here</a>
-*/
-.github-link{ 
-    color: #4078c0; 
-    }
-
-.linkedin-link{
-    color: #0a66c2; 
-    }
-
-/* Personalizacion de las viñetas*/
-ul{
-    color: white; 
-    text-align: center; 
-    list-style-position: inside;
+.ul_encabezado{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
 }
 
-/*Personalizacion de los numericos*/
-ol{
-    color: white;
-    text-align: center; 
-    list-style-position: inside;
+/* Hover = cuando pasás el mouse */ 
+.ul_encabezado:hover { 
+  color: red; 
+  text-decoration: underline; 
 }
+
+
+/* Estilo para todas las listas ordenadas */
+ol {
+  color: black;
+  list-style-position: inside;
+}
+
+/*Personalizacion del body*/
+body{
+  margin: 0; 
+  padding: 0; 
+  background-color: white; 
+  color: black;
+}
+
+/*Personalizacion del nav*/
+nav{
+  top: 0;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: rgba(255, 235, 205, 0.493);
+}
+
+/*Personalizacion de los "h"*/
+
