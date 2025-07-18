@@ -1,0 +1,41 @@
+/* Aplica a todos los enlaces */
+a {
+  color: cyan;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover = cuando pasás el mouse */
+a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+/* Tambien se puede agregar clases si querés estilos
+distintos para GitHub y LinkedIn, para ello en el
+<a> de cada link agregarias:
+
+<a href="..." class="github-link">Click here</a>
+<a href="..." class="linkedin-link">Click here</a>
+*/
+.github-link{ 
+    color: #4078c0; 
+    }
+
+.linkedin-link{
+    color: #0a66c2; 
+    }
+
+/* Personalizacion de las viñetas*/
+ul{
+    color: white; 
+    text-align: center; 
+    list-style-position: inside;
+}
+
+/*Personalizacion de los numericos*/
+ol{
+    color: white;
+    text-align: center; 
+    list-style-position: inside;
+}

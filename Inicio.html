@@ -4,22 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile </title>
+    <title>Profile</title>
+    <!-- Personalizacion de los links-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- interacciones, como mostrar un mensaje cuando alguien hace clic-->
+    <script src="scripts.js"></script>
+
 </head>
 <body style="margin: 0; padding: 0; background-color: black;">
     <header style="color: white;">
         <h1>THIS IS MY PROFILE</h1>
     </header>
-
     <main style="color: white;">    
         <h2 style="margin: 0; padding: 0; text-align: center;">Who am i?</h2>
-        <p style="margin: 0; padding: 0; text-align: center;">My full name is Santino Casado</p>
-        <p style="margin: 0; padding: 0; text-align: center;">I'm from Buenos Aires, Argentina</p>
-        <p style="margin: 0; padding: 0; text-align: center;">I'm a student of the technical degree in programming at National Technological University (UTN)</p>
-        <p style="margin: 0; padding: 0; text-align: center;">My skills levels are Python - Intermediate | Java - Intermediate | Git Bash - Beginner/Intermediate | B2 Ingles</p>
+        <ul>
+            <li>My full name is Santino Casado</li>
+            <li>I'm from Buenos Aires, Argentina</li>
+            <li>I'm a student of the technical degree in programming at National Technological University (UTN)</li>
+        </ul>
+        <h3 style="margin: 0; padding: 0; text-align: center;">My skills</h3>
+        <ol>
+            <li>Python - Intermediate</li>
+            <li>Java - Intermediate</li>
+            <li>Git Bash - Beginner/Intermediate</li>
+            <li>B2 Ingles</li>
+        </ol>
     </main>
-    <article >
-        <p style="color: white; padding: 0; text-align: center;">This is my  portfolio <a href=""> Click here</a></p>
+    <article style="color: white; padding: 0; text-align: center;">
+        <h4>Here you have some important links</h4>
+        <!---contenedor genérico para agrupar elementos-->
+        <div style="display: flex; justify-content: center; gap: 50px;">
+        <!-- display: flex = permite alinear elementos en fila o columna | center: gap Deja espacio entre los elementos interno-->
+            <!-- GitHub -->
+            <div>
+            <p>This is my GitHub</p>
+            <p><a href="https://github.com/SantinoCasado" onclick="showAlert('GitHub')">Click here</a></p>
+            </div>
+
+            <!-- LinkedIn -->
+            <div>
+            <p>This is my LinkedIn</p>
+            <p><a href="https://www.linkedin.com/in/santino-casado-1841902aa/" onclick="showAlert('LinkedIn')">Click here</a></p>
+            </div>
+        </div>
     </article>
 </body>
 </html>
