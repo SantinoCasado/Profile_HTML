@@ -19,7 +19,7 @@
 
 /* Hover = cuando pasás el mouse */ 
 .ul_encabezado:hover { 
-  color: red; 
+  color: black; 
   text-decoration: underline; 
 }
 
@@ -30,12 +30,21 @@ ol {
   list-style-position: inside;
 }
 
-/*Personalizacion del body*/
+/*Personalizacion de las partes*/
 body{
   margin: 0; 
   padding: 0; 
   background-color: white; 
   color: black;
+}
+
+header{
+  padding: 0;
+}
+
+article{
+  padding: 0; 
+  text-align: center;
 }
 
 /*Personalizacion del nav*/
@@ -48,4 +57,11 @@ nav{
 }
 
 /*Personalizacion de los "h"*/
+h1{
+  text-align: center;
+}
 
+h2{
+  margin: 0; 
+  padding: 0;
+}
