@@ -3,6 +3,11 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
+
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 /* Personaliza la lista ul con clase .ul_description */
