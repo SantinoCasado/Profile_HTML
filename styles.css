@@ -10,22 +10,21 @@
   font-style: normal;
 }
 
-
-.ul_encabezado{
+.ul_encabezado {
   display: flex;
   list-style: none;
   justify-content: space-around;
 }
 
-/* Hover = cuando pasás el mouse */ 
-.a_nav:hover { 
+/* Hover = cuando pasás el mouse */
+.a_nav:hover {
   color: white;
   text-decoration: underline;
 }
 
-.inputs{
-  margin: 15px; 
-  height: 30px; 
+.inputs {
+  margin: 15px;
+  height: 30px;
   width: 80%;
 }
 
@@ -35,7 +34,7 @@
   align-items: center;
   text-align: center;
   width: 220px;
-  margin: 20px; 
+  margin: 20px;
 }
 
 .skill-item img {
@@ -44,7 +43,6 @@
   border: solid white 2px;
   border-radius: 25px;
 }
-
 
 .titulo {
   font-weight: bold;
@@ -59,53 +57,54 @@
   margin-top: 5px;
 }
 
-#home{
-  a{
+#home {
+  a {
     color: goldenrod;
   }
   display: grid;
   grid-template-columns: 4fr 4fr;
   grid-template-rows: 4fr 2fr;
 
-  #home1{
+  #home1 {
     grid-column: 1/2;
     grid-row: 1/2;
     margin-top: 20px;
     margin-left: 70px;
     margin-right: 15px;
-    ul{
+    ul {
       list-style-position: inside;
       list-style-position: inside;
     }
   }
 
-  #home2{
+  #home2 {
     grid-column: 2/2;
     grid-row: 1/2;
     margin-top: 20px;
     margin-right: 70px;
     margin-left: 15px;
-    ul{
+    ul {
       list-style-position: inside;
       list-style-position: inside;
     }
   }
 
-  #home1, #home2 {
-  background-color: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 0 15px rgba(173, 216, 230, 0.6); /* sombra celeste suave */
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  #home1,
+  #home2 {
+    background-color: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.6); /* sombra celeste suave */
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
-  display: flex;
-  flex-direction: column;       /* orden vertical */
-  align-items: center;          /* centra horizontalmente */
-  text-align: center;           /* centra el texto */
+    display: flex;
+    flex-direction: column; /* orden vertical */
+    align-items: center; /* centra horizontalmente */
+    text-align: center; /* centra el texto */
   }
 }
 
-#Description{
+#Description {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -115,34 +114,32 @@
   padding: 5pxs;
 }
 
-#title-skills{
+#title-skills {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 
-  margin: 0; 
+  margin: 0;
   padding: 0;
   text-align: center;
 }
 
-#inputBotomm{
-  margin: 15px; 
-  height: 30px; 
-  background-color: brown; 
-  cursor: pointer; 
+#inputBotomm {
+  margin: 15px;
+  height: 30px;
+  background-color: brown;
+  cursor: pointer;
   width: 80%;
 }
 
-#Links{
-  display: flex; 
-  justify-content: center; 
+#Links {
+  display: flex;
+  justify-content: center;
   gap: 100px;
 }
 
-
-
-#div_programingSkills{
+#div_programingSkills {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -157,20 +154,19 @@
   width: 90%;
   margin: 0 auto;
   padding: 20px;
-  figure{
-    img{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 10px;
-        padding: 10px;
-        border: white solid;
-        border-radius: 25px;
-        box-shadow: 6px 6px 8px white;
-      }
+  figure {
+    img {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 10px;
+      padding: 10px;
+      border: white solid;
+      border-radius: 25px;
+      box-shadow: 6px 6px 8px white;
     }
-  } 
-
+  }
+}
 
 /* Estilo para todas las listas ordenadas */
 ol {
@@ -179,32 +175,32 @@ ol {
 }
 
 /*Personalizacion de las partes*/
-body{
-  margin: 0; 
-  padding: 0; 
+body {
+  margin: 0;
+  padding: 0;
   color: white;
   background-image: url("img/background.svg");
-  background-size: cover;        /* Hace que la imagen cubra toda la pantalla */
-  background-repeat: no-repeat;  /* Evita que se repita */
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+  background-repeat: no-repeat; /* Evita que se repita */
 }
 
-header{
+header {
   padding: 0;
 }
 
-article{
+article {
   margin-top: 50px;
-  padding: 0; 
+  padding: 0;
   text-align: center;
-  h4{
-    font-family: 'Times New Roman', Times, serif;
+  h4 {
+    font-family: "Times New Roman", Times, serif;
     font-size: 1rem;
     color: red;
   }
 }
 
 /*Personalizacion del nav*/
-nav{
+nav {
   top: 0;
   width: 100%;
   height: 60px;
@@ -213,18 +209,18 @@ nav{
 }
 
 /*Personalizacion de los "h"*/
-h1{
+h1 {
   text-align: center;
   color: goldenrod;
 }
 
-h2{
-  margin: 0; 
+h2 {
+  margin: 0;
   padding: 0;
 }
 
-footer{  
-    width: 50%;
-    padding: 20px;
-    position: absolute;
+footer {
+  width: 50%;
+  padding: 20px;
+  position: absolute;
 }
