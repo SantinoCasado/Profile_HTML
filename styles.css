@@ -57,13 +57,50 @@
   margin-top: 5px;
 }
 
+#home1:hover{
+  h3{
+    /*
+    - rotate3d(1, 1, 1, 10deg): rota el elemento 10 grados 
+    alrededor del eje definido por (x=1, y=1, z=1), 
+    lo que genera una rotación en diagonal en el espacio 3D.
+    - scale(1.1): agranda el elemento un 10%, 
+    haciéndolo ligeramente más grande cuando se pasa el cursor por encima.
+    */
+    transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
+  }
+}
+
+#home2:hover{
+  h3{
+    transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
+  }
+}
+
 #home {
   a {
     color: goldenrod;
+    transition: transform 0.4s ease, transform 0.4s ease-in-out;
+    display: inline-block;
   }
+
+  a:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+  }
+
   display: grid;
   grid-template-columns: 4fr 4fr;
   grid-template-rows: 4fr 2fr;
+
+  h3{
+    /* 
+    - transform: propiedad que será animada (por ejemplo, scale, translate, rotate, etc.).
+    - 0.5s: duración de la transición.
+    - ease: tipo de aceleración — empieza lento, acelera en el medio, termina lento.
+    - ease-in-out: otra curva de aceleración — empieza y termina lento.
+    */
+    transition: transform 0.5s ease, transform 0.5s ease-in-out;
+  }
 
   #home1 {
     grid-column: 1/2;
@@ -74,6 +111,16 @@
     ul {
       list-style-position: inside;
       list-style-position: inside;
+    }
+    /*Animacion de items*/
+    .item1, .item2, .item3, .item4{
+      transition: background-color 0.4s ease, transform 0.6s ease-in-out;
+    }
+    
+    .item1:hover, .item2:hover, .item3:hover, .item4:hover{
+      color: rgba(255, 0, 0, 0.562);
+      font-weight: bold;
+      transform: translateX(-30px) scale(1.1);
     }
   }
 
@@ -87,10 +134,21 @@
       list-style-position: inside;
       list-style-position: inside;
     }
+    /*Animacion de items*/
+    .item1, .item2, .item3, .item4{
+      transition: background-color 0.4s ease, transform 0.6s ease-in-out;
+    }
+    
+    .item1:hover, .item2:hover, .item3:hover, .item4:hover{
+      color: rgba(255, 0, 0, 0.562);
+      font-weight: bold;
+      transform: translateX(-30px) scale(1.1);
+    }
   }
+}
 
-  #home1,
-  #home2 {
+
+  #home1, #home2 {
     background-color: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
     border-radius: 15px;
     padding: 15px;
@@ -102,7 +160,6 @@
     align-items: center; /* centra horizontalmente */
     text-align: center; /* centra el texto */
   }
-}
 
 #Description {
   font-family: "Source Code Pro", monospace;
@@ -125,18 +182,23 @@
   text-align: center;
 }
 
-#inputBotomm {
-  margin: 15px;
-  height: 30px;
-  background-color: brown;
-  cursor: pointer;
-  width: 80%;
-}
 
 #Links {
   display: flex;
   justify-content: center;
   gap: 100px;
+  transition: transform 1s ease, transform 2s ease-in-out;
+
+  div{
+    .img1, .img2{
+      transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .img1:hover, .img2:hover{
+      transform: scale(1.1);
+      font-weight: bold;
+    }
+  }
 }
 
 #div_programingSkills {
@@ -156,6 +218,8 @@
   padding: 20px;
   figure {
     img {
+      transition: transform 0.4s ease, transform 0.4s ease-in-out;
+      display: inline-block;
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -164,6 +228,11 @@
       border: white solid;
       border-radius: 25px;
       box-shadow: 6px 6px 8px white;
+    }
+
+    .img1:hover, .img2:hover, .img3:hover, .img4:hover{
+      transform: scale(1.1);
+      font-weight: bold;
     }
   }
 }
@@ -219,8 +288,33 @@ h2 {
   padding: 0;
 }
 
-footer {
+footer{
   width: 50%;
   padding: 20px;
   position: absolute;
+
+  h2{
+    transition: transform 0.5s ease, transform 0.5s ease-in-out;
+  }
+  h2:hover{
+    transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
+  }
+
+  .inputs:hover{
+    border: red 5px solid;
+  }
+
+  #inputBotomm {
+  margin: 15px;
+  height: 30px;
+  background-color: brown;
+  cursor: pointer;
+  width: 80%;
+  transition: transform 0.5s ease, transform 0.5s ease-in-out;
+  }
+
+  #inputBotomm:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+  }
 }
