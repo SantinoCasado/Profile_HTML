@@ -20,6 +20,7 @@
 .a_nav:hover {
   color: white;
   text-decoration: underline;
+  animation: pulse 0.3s ease-in-out;
 }
 
 .inputs {
@@ -28,21 +29,6 @@
   width: 80%;
 }
 
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 220px;
-  margin: 20px;
-}
-
-.skill-item img {
-  margin: 10px 0;
-  padding: 10px;
-  border: solid white 2px;
-  border-radius: 25px;
-}
 
 .titulo {
   font-weight: bold;
@@ -159,6 +145,8 @@
     flex-direction: column; /* orden vertical */
     align-items: center; /* centra horizontalmente */
     text-align: center; /* centra el texto */
+
+    animation: fadeIn 1s ease-out forwards;
   }
 
 #Description {
@@ -183,7 +171,7 @@
 }
 
 
-#Links {
+#Links{
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -216,6 +204,18 @@
   width: 90%;
   margin: 0 auto;
   padding: 20px;
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 220px;
+    margin: 20px;
+
+    animation: slideInLeft 0.7s ease-out forwards;
+  }
+
   figure {
     img {
       transition: transform 0.4s ease, transform 0.4s ease-in-out;
@@ -228,11 +228,14 @@
       border: white solid;
       border-radius: 25px;
       box-shadow: 6px 6px 8px white;
+
+      animation: rotate 3s linear infinite;
     }
 
     .img1:hover, .img2:hover, .img3:hover, .img4:hover{
       transform: scale(1.1);
       font-weight: bold;
+      animation: none;
     }
   }
 }
@@ -280,7 +283,10 @@ nav {
 /*Personalizacion de los "h"*/
 h1 {
   text-align: center;
-  color: goldenrod;
+  color: rgba(216, 162, 27, 0.712);
+
+  animation: glow 2.5s ease-in-out infinite;
+
 }
 
 h2 {
@@ -293,15 +299,39 @@ footer{
   padding: 20px;
   position: absolute;
 
+  textarea.inputs{
+    height: 5em;
+    font-family: inherit;
+  }
+
   h2{
     transition: transform 0.5s ease, transform 0.5s ease-in-out;
+    margin-bottom: 20px;
   }
   h2:hover{
     transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
   }
 
+  .inputs{
+    background-color: rgba(128, 128, 128, 0.39);
+  }
+
+  input[type="submit"]:hover{
+    animation: pulse 0.3s ease-in-out;
+  }
+
   .inputs:hover{
-    border: red 5px solid;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); /* sombra dorada suave */
+    transform: scale(1.01); /* leve agrandamiento del footer */
+    transition: all 0.4s ease-in-out;
+  }
+
+  .inputs:focus:invalid{
+    background-color: rgba(255, 0, 0, 0.37);
+  }
+
+  .inputs:focus:valid{
+    background-color: rgba(0, 128, 0, 0.733);
   }
 
   #inputBotomm {
@@ -317,4 +347,51 @@ footer{
     transform: scale(1.1);
     font-weight: bold;
   }
+}
+
+/* Aniamtions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotateY(odeg);
+  }
+  50%{
+    transform: rotateY(90deg);
+  }
+  100%{
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  0%   { text-shadow: 0 0 5px #00bcd4; }
+  50%  { text-shadow: 0 0 20px #00bcd4; }
+  100% { text-shadow: 0 0 5px #00bcd4; }
 }

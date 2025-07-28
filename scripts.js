@@ -1,6 +1,20 @@
+/* Variables */
+
+/* tenés acceso al formulario HTML desde JavaScript, y podés interactuar con él*/
+formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", showAlertFormulario)
+
 
 /*Script que utiliza la funcion show alert, 
 pasandole el parametro del nombre de la plataforma */
+
+function showAlertFormulario(event){
+  event.preventDefault(); //Evita que te envie al incio
+  console.log("Formulario enviado");
+  alert("Information send correctly");
+  formulario.reset();
+}
 
 function showAlertLinks(platform) {
   alert("Opening the " + platform + " profile...");
