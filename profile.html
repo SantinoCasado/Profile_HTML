@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <!-- interacciones, como mostrar un mensaje cuando alguien hace clic-->
-    <script src="scripts.js" defer></script>
+    <script src="src/scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -133,6 +133,8 @@
     <footer>
         <form action="" id="formulario">
             <h2>¿Do you want information about me or my work?</h2>
+            <p id="datatype"></p>
+            <hr>
             <label for="name"> Write your full name:</label>
             <br>
             <input class="inputs" id="name" type="text" name="name" placeholder="Santino Casado" required pattern="[A-Za-ZÁÉÍÓÚáéíóúÑñ]+" title="Only letters allowed!">

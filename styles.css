@@ -213,7 +213,7 @@
     width: 220px;
     margin: 20px;
 
-    animation: slideInLeft 0.7s ease-out forwards;
+    animation: slideInLeft 1.3s ease-out forwards;
   }
 
   figure {
@@ -317,7 +317,7 @@ footer{
   }
 
   input[type="submit"]:hover{
-    animation: pulse 0.3s ease-in-out;
+    animation: pulse 0.8s ease-in-out;
   }
 
   .inputs:hover{
@@ -326,9 +326,11 @@ footer{
     transition: all 0.4s ease-in-out;
   }
 
-  .inputs:focus:invalid{
-    background-color: rgba(255, 0, 0, 0.37);
+  .inputs:focus:invalid {
+    background-color: rgba(255, 0, 0, 0.37); /* Rojo suave */
+    border: 2px solid red;
   }
+
 
   .inputs:focus:valid{
     background-color: rgba(0, 128, 0, 0.733);
