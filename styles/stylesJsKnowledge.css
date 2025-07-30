@@ -1,0 +1,110 @@
+.a_nav{
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.a_nav:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#encabezado_nav {
+    top: 0;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: rgba(127, 255, 212, 0.205);
+}
+
+#ul_encabezado {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#JsExamples{
+    width: 90%; /* más ancho para que los hijos quepan cómodos */
+    padding: 20px;
+    display: flex; /* clave para poner elementos en fila */
+    gap: 50px; /* espacio entre los divs */
+    justify-content: center; /* centrado horizontal */
+    flex-wrap: wrap; /* evita que se rompa si hay poco espacio */
+    margin: auto; /* centrado general */
+}
+
+#div_dataType, #div_calculadora{
+    text-align: center;
+
+    background-color: rgba(137, 43, 226, 0.192);
+    border: 2px solid rgba(255, 215, 0, 0.4); /* borde dorado translúcido */
+    border-radius: 20px; /* esquinas suaves */
+    padding: 60px;
+
+    /*------- h2 --------  */
+    h2{
+        text-align: center;
+        transition: transform 0.5s ease, transform 0.5s ease-in-out;
+        margin-bottom: 20px;
+    }
+    /*--------Inputs--------*/
+    .inputs{
+        background-color: rgba(128, 128, 128, 0.877);
+    }
+    input[type="submit"]:hover{
+        animation: pulse 0.8s ease-in-out;
+    }
+    .inputs:hover{
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); /* sombra dorada suave */
+        transform: scale(1.01); /* leve agrandamiento del footer */
+        transition: all 0.4s ease-in-out;
+    }
+    /*-------- Buttons -------- */
+    #inputButton, #plus, #minus, #times, #divided {
+        margin: 15px;
+        height: 30px;
+        background-color: brown;
+        cursor: pointer;
+        transition: transform 0.5s ease, transform 0.5s ease-in-out;
+    }
+
+    #inputButton:hover, #plus:hover , #minus:hover, #times:hover, #divided:hover{
+        transform: scale(1.1);
+        font-weight: bold;
+    }
+
+    #datatype_practice{
+        color: white;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url("../img/background.svg");
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que se repita */
+}
+
+header {
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(216, 162, 27, 0.712);
+
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%   { text-shadow: 0 0 5px #00bcd4; }
+    50%  { text-shadow: 0 0 20px #00bcd4; }
+    100% { text-shadow: 0 0 5px #00bcd4; }
+}

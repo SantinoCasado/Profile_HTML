@@ -1,26 +1,7 @@
-/* Aplica a los enlaces con clase .a_nav */
-.a_nav {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
 .ul_encabezado {
   display: flex;
   list-style: none;
   justify-content: space-around;
-}
-
-/* Hover = cuando pasás el mouse */
-.a_nav:hover {
-  color: white;
-  text-decoration: underline;
-  animation: pulse 0.3s ease-in-out;
 }
 
 .inputs {
@@ -41,6 +22,31 @@
   font-size: 0.9em;
   color: #ccc;
   margin-top: 5px;
+}
+
+#encabezado_nav {
+  top: 0;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: rgba(127, 255, 212, 0.205);
+  
+  .a_nav{
+    color: white;
+    text-decoration: none;
+
+
+    font-weight: bold;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .a_nav:hover {
+  text-decoration: underline;
+  color: white;
+  }
 }
 
 #home1:hover{
@@ -241,17 +247,13 @@
 }
 
 /* Estilo para todas las listas ordenadas */
-ol {
-  color: white;
-  list-style-position: inside;
-}
 
 /*Personalizacion de las partes*/
 body {
   margin: 0;
   padding: 0;
   color: white;
-  background-image: url("img/background.svg");
+  background-image: url("../img/background.svg");
   background-size: cover; /* Hace que la imagen cubra toda la pantalla */
   background-repeat: no-repeat; /* Evita que se repita */
 }
@@ -269,15 +271,6 @@ article {
     font-size: 1rem;
     color: red;
   }
-}
-
-/*Personalizacion del nav*/
-nav {
-  top: 0;
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  background-color: rgba(127, 255, 212, 0.205);
 }
 
 /*Personalizacion de los "h"*/
@@ -336,7 +329,7 @@ footer{
     background-color: rgba(0, 128, 0, 0.733);
   }
 
-  #inputBotomm {
+  #inputButton{
   margin: 15px;
   height: 30px;
   background-color: brown;
@@ -345,7 +338,7 @@ footer{
   transition: transform 0.5s ease, transform 0.5s ease-in-out;
   }
 
-  #inputBotomm:hover{
+  #inputButton:hover{
     transform: scale(1.1);
     font-weight: bold;
   }

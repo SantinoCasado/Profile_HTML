@@ -2,38 +2,53 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <script src="src/variables_javascript.js" defer=""></script>
+    <link rel="stylesheet" href="styles/stylesJsKnowledge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="src/jsKnowledge.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
+        <nav id="encabezado_nav">
+            <ul id="ul_encabezado">
+                <li><a class="a_nav" href="profile.html">Inicio</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Clase de Prueba</h1>
+    <main style="margin-top: 65px;">
+        <h1>My Java Script Knowledge</h1>
     </main>
-    <div id="formulariopractica">
-        <p>Dale click al botón para comprobar que tipo de variable es</p>
-        <ul>
-            <li>Let tipo1 = 'Hola'</li>
-            <li>Let tipo2 = 1998</li>
-            <li>Let tipo3 = true;</li>
-        </ul>
-        <button id="buttonform">Comprobar</button>
-        <p id="datatype"></p>
-        <hr>
-        <h2>Comprobar mis datos</h2>
-        Dato 1
-        <input type="text" id="dato1"><br>
-        Dato 2
-        <input type="text" id="dato2"><br>
-        <button id="buttonCheck">Comprobar mis datos</button>
-        <p id="datatype_practice"></p>
+    <div id="JsExamples">
+        <div id="div_dataType">
+            <hr>
+            <h2>Data Type</h2>
+            <label for="data">First data</label>
+            <input class="inputs" type="text" id="dato1_value">
+            <br>
+            <label for="data">Second data</label>
+            <input class="inputs" type="text" id="dato2_value">
+            <br>
+            <button id="inputButton">Check type of data</button>
+            <br>
+            <p id="datatype_practice"></p>
+        </div>
+        <div id="div_calculadora">
+            <hr>
+            <h2>Calculator</h2>
+            <label for="data">First number</label>
+            <input class="inputs" type="text" id="number1">
+            <br>
+            <label for="data">Second number</label>
+            <input class="inputs" type="text" id="number2">
+            <br>
+            <button id="plus" onclick="plus()">Plus</button>
+            <button id="minus" onclick="minus()">Minus</button>
+            <button id="times" onclick="times()">Times</button>
+            <button id="divided" onclick="divided()">Divided</button>
+            <br>
+            <p id="result"></p>
+        </div>
     </div>
 
 </body></html>
