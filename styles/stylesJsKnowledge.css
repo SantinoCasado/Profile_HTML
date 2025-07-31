@@ -38,13 +38,13 @@
     margin: auto; /* centrado general */
 }
 
-#div_dataType, #div_calculadora{
+#div_dataType, #div_calculadora, #div_comparator{
     text-align: center;
 
     background-color: rgba(137, 43, 226, 0.192);
     border: 2px solid rgba(255, 215, 0, 0.4); /* borde dorado translúcido */
     border-radius: 20px; /* esquinas suaves */
-    padding: 60px;
+    padding: 40px;
 
     /*------- h2 --------  */
     h2{
@@ -65,7 +65,7 @@
         transition: all 0.4s ease-in-out;
     }
     /*-------- Buttons -------- */
-    #inputButton, #plus, #minus, #times, #divided {
+    #inputButton, #plusButton, #minusButton, #timesButton, #dividedButton, #comparatorButton {
         margin: 15px;
         height: 30px;
         background-color: brown;
@@ -73,7 +73,7 @@
         transition: transform 0.5s ease, transform 0.5s ease-in-out;
     }
 
-    #inputButton:hover, #plus:hover , #minus:hover, #times:hover, #divided:hover{
+    #inputButton:hover, #plusButtona:hover , #minusButton:hover, #timesButton:hover, #dividedButton:hover, #comparatorButton:hover{
         transform: scale(1.1);
         font-weight: bold;
     }

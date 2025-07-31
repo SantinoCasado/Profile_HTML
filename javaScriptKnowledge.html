@@ -20,6 +20,7 @@
         <h1>My Java Script Knowledge</h1>
     </main>
     <div id="JsExamples">
+        <!-- DataType -->
         <div id="div_dataType">
             <hr>
             <h2>Data Type</h2>
@@ -31,8 +32,9 @@
             <br>
             <button id="inputButton">Check type of data</button>
             <br>
-            <p id="datatype_practice"></p>
+            <p id="datatype_practice">The first data is: <br>The second data is:</p>
         </div>
+        <!-- Calculadora -->
         <div id="div_calculadora">
             <hr>
             <h2>Calculator</h2>
@@ -42,13 +44,26 @@
             <label for="data">Second number</label>
             <input class="inputs" type="text" id="number2">
             <br>
-            <button id="plus" onclick="plus()">Plus</button>
-            <button id="minus" onclick="minus()">Minus</button>
-            <button id="times" onclick="times()">Times</button>
-            <button id="divided" onclick="divided()">Divided</button>
+            <button id="plusButton">Plus</button>
+            <button id="minusButton">Minus</button>
+            <button id="timesButton">Times</button>
+            <button id="dividedButton">Divided</button>
             <br>
-            <p id="result"></p>
+            <p id="result">The result is: </p>
+        </div>
+        <div id="div_comparator">
+            <hr>
+            <h2>Data Comparator</h2>
+            <label for="data">First one</label>
+            <input class="inputs" type="text" id="comparador1">
+            <br>
+            <label for="data">Second one</label>
+            <input class="inputs" type="text" id="comparador2">
+            <br>
+            <button id="comparatorButton">Compare data</button>
+            <br>
+            <p id="resultComparator">Do the two have the same values? <br>Are the same type? <br> Are they strictly the same? <br> Who is greater?</p>
         </div>
     </div>
-
-</body></html>
+</body>
+</html>
