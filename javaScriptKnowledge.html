@@ -30,7 +30,7 @@
             <label for="data">Second data</label>
             <input class="inputs" type="text" id="dato2_value">
             <br>
-            <button id="inputButton">Check type of data</button>
+            <button id="inputButton" class="button">Check type of data</button>
             <br>
             <p id="datatype_practice">The first data is: <br>The second data is:</p>
         </div>
@@ -44,13 +44,14 @@
             <label for="data">Second number</label>
             <input class="inputs" type="text" id="number2">
             <br>
-            <button id="plusButton">Plus</button>
-            <button id="minusButton">Minus</button>
-            <button id="timesButton">Times</button>
-            <button id="dividedButton">Divided</button>
+            <button id="plusButton" class="button">Plus</button>
+            <button id="minusButton" class="button">Minus</button>
+            <button id="timesButton" class="button">Times</button>
+            <button id="dividedButton" class="button">Divided</button>
             <br>
             <p id="result">The result is: </p>
         </div>
+        <!-- Comparator -->
         <div id="div_comparator">
             <hr>
             <h2>Data Comparator</h2>
@@ -60,9 +61,36 @@
             <label for="data">Second one</label>
             <input class="inputs" type="text" id="comparador2">
             <br>
-            <button id="comparatorButton">Compare data</button>
+            <button id="comparatorButton" class="button">Compare data</button>
             <br>
             <p id="resultComparator">Do the two have the same values? <br>Are the same type? <br> Are they strictly the same? <br> Who is greater?</p>
+        </div>
+        <!-- Table Flex -->
+            <div id="div_for">
+            <hr>
+            <h2>Table Flex</h2>
+            <label for="data">width</label>
+            <input class="inputs" type="text" id="width">
+            <br>
+            <label for="data">length</label>
+            <input class="inputs" type="text" id="length">
+            <br>
+            <button id="createTableButton" class="button">Create Table</button>
+            <br>
+            X:<input class="inputs" type="text" id="x_position"> Y: <input class="inputs" type="text" id="y_position">
+            <button id="changePositionButton" class="button">Change positions</button>
+            <p id="table"></p>
+            <p id="error"></p>
+        </div>
+        <!-- Rotate image -->
+        <div id="div_rotateImg">
+            <hr>
+            <h2>Rotate image</h2>
+            <figure>
+                <img class="imgLinux" src="img/linux.png" alt="logo linux" width="200px" height="200px">
+            </figure>
+            <br>
+            <button id="startRotationButton" class="button">Start rotation</button> <button id="stopRotationButton" class="button">Stop Rotation</button>
         </div>
     </div>
 </body>

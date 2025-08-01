@@ -38,7 +38,7 @@
     margin: auto; /* centrado general */
 }
 
-#div_dataType, #div_calculadora, #div_comparator{
+#div_dataType, #div_calculadora, #div_comparator, #div_for, #div_rotateImg{
     text-align: center;
 
     background-color: rgba(137, 43, 226, 0.192);
@@ -65,7 +65,7 @@
         transition: all 0.4s ease-in-out;
     }
     /*-------- Buttons -------- */
-    #inputButton, #plusButton, #minusButton, #timesButton, #dividedButton, #comparatorButton {
+    .button{
         margin: 15px;
         height: 30px;
         background-color: brown;
@@ -73,13 +73,18 @@
         transition: transform 0.5s ease, transform 0.5s ease-in-out;
     }
 
-    #inputButton:hover, #plusButtona:hover , #minusButton:hover, #timesButton:hover, #dividedButton:hover, #comparatorButton:hover{
+    .button:hover{
         transform: scale(1.1);
         font-weight: bold;
     }
 
     #datatype_practice{
         color: white;
+    }
+
+    .imgLinux {
+    transition: transform 0.05s linear;
+    transform-origin: center center;
     }
 }
 

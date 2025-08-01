@@ -3,13 +3,23 @@
 /* tenés acceso al formulario HTML desde JavaScript, y podés interactuar con él*/
 const formulario = document.getElementById("formulario");
 const datatype = document.getElementById("datatype");
+
 const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const nformationInput = document.getElementById("information")
 
-//Mantiene el color rojo si el nombre tiene numeros
+//-------------------------------------------------------------------------------
+// Función de validación: solo letras y espacios
+function validarNombre(str) {
+  const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+  return regex.test(str);
+}
+
+// Color dinámico del input
 nameInput.addEventListener("input", () => {
-  const value = nameInput.value;
+  const name_value = nameInput.value.trim();
 
-  if (!isNaN(value)) {
+  if (!validarNombre(name_value) || name_value === "") {
     nameInput.style.backgroundColor = "rgba(255, 0, 0, 0.37)";
     nameInput.style.border = "2px solid red";
   } else {
@@ -18,32 +28,23 @@ nameInput.addEventListener("input", () => {
   }
 });
 
-//Checkeo de datos del form
+// Validación al enviar el formulario
 formulario.addEventListener("submit", function (event) {
-  event.preventDefault(); // Evita que te envie al inicio
+  event.preventDefault();
 
-  const name_value = document.getElementById("name").value.trim(); // El valor del input name
+  const name_value = nameInput.value.trim();
 
-  let dato1, dato1_tipo;
-
-  if (!isNaN(name_value) && name_value !== "") {
-    dato1 = Number(name_value);
-    dato1_tipo = typeof dato1;
-    alert("Your name can have numbers!!");
+  if (!validarNombre(name_value)) {
+    alert("Your name can't have numbers or symbols!");
   } else {
-    dato1 = name_value;
-    dato1_tipo = typeof dato1;
-    console.log("Formulario enviado");
-    alert("Information send correctly");
+    alert("Information sent correctly.");
     formulario.reset();
+    nameInput.style.backgroundColor = "";
+    nameInput.style.border = "";
   }
-
-  // Actualiza el párrafo correcto del HTML
-  datatype.innerHTML = `El nombre es: ${dato1_tipo}`;
 });
 
-
-
+//-----------------------------------------------------------------------------------
 /*Script que utiliza la funcion show alert, 
 pasandole el parametro del nombre de la plataforma */
 
@@ -68,3 +69,7 @@ function showAlertDownload(archive, event) {
     alert("Download cancelled.");
   }
 }
+
+
+//-----------------------------------------------------------------------------------------------------------------
+//Guardado de datos
