@@ -38,7 +38,50 @@
     margin: auto; /* centrado general */
 }
 
-#div_dataType, #div_calculadora, #div_comparator, #div_for, #div_rotateImg{
+#div_events {
+    text-align: center;
+    background-color: rgba(137, 43, 226, 0.192);
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    border-radius: 20px;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    }
+
+    hr {
+    width: 80%;
+    }
+
+    h2 {
+    text-align: center;
+    transition: transform 0.5s ease, transform 0.5s ease-in-out;
+    margin-bottom: 30px;
+    }
+
+    #contenedor_eventos {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        #contenedor_gif, #contenedor_clicks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            min-width: 250px;
+        }
+    }
+
+    h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#div_dataType, #div_calculadora, #div_comparator, #div_for, #div_rotateImg, #div_dom{
     text-align: center;
 
     background-color: rgba(137, 43, 226, 0.192);
@@ -86,6 +129,8 @@
     transition: transform 0.05s linear;
     transform-origin: center center;
     }
+
+
 }
 
 body {

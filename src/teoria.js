@@ -166,3 +166,73 @@ async function traermisCursos() {
     console.error("Hubo un problema al traer los cursos:", error);
   }
 }
+
+//DOM
+function crearDiv(){
+  const contenedor = document.getElementById("DOM");
+
+  const newDIV = document.createElement("div");
+  newDIV.id = "divgenerado";
+  const p = document.createElement("p");
+
+  p.innerText = "Soy un div creado desde el DOM de Javascript"
+
+  newDIV.style.padding = "5px";
+  newDIV.style.margin = "10px 0";
+  newDIV.style.backgroundColor = "#f0f0f0"
+  newDIV.appendChild(p);
+  contenedor.appendChild(newDIV);
+}
+
+function eliminarDiv(){
+  const tarjeta = document.getElementById("divgenerado");
+  if(tarjeta){
+    tarjeta.remove();
+  }
+}
+
+// Eventos
+zona1.onmouseover = () => {
+  zona1.innerHTML = "Estoy siendo seleccionado";
+  zona1.style.boxShadow = "0 0 10px cyan"
+}
+
+zona1.onmouseout = () => {
+  zona1.innerText = "Ya no estoy siendo seleccionado"
+  zona1.style.boxShadow = "none";
+}
+
+zona1.onclick = () => {
+  zona1.style.border = "4px dashed purple";
+  zona1.innerText = "Has hecho click"
+}
+
+zona1.onmousedown = () => {
+  zona1.innerText = "Estas dando click"
+}
+
+zona1.onmouseup = () => {
+  zona1.innerText = "Soltaste con el botón derecho"
+}
+
+document.addEventListener("contextmenu", function(event){
+  event.preventDefault();
+})
+
+zona1.ondblclick = () => {
+  zona1.style.background = "pink";
+  zona1.innerText = "Doble click, he cambiado mi fondo";
+}
+
+zona2.addEventListener("keydown", (e) =>{
+  zona2.innerText = `Has presionado: ${e.key}`;
+});
+
+zona2.addEventListener("keyup", (e) =>{
+  zona2.innerText = `Has soltado: ${e.key}`;
+})
+
+zona2.addEventListener("click", () => {
+  zona2.focus();
+  zona2.innerText = "Estoy listo para recibir información";
+})

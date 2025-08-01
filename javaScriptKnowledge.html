@@ -90,7 +90,36 @@
                 <img class="imgLinux" src="img/linux.png" alt="logo linux" width="200px" height="200px">
             </figure>
             <br>
-            <button id="startRotationButton" class="button">Start rotation</button> <button id="stopRotationButton" class="button">Stop Rotation</button>
+            <button id="startRotationButton" class="button">Start rotation</button> <button id="stopRotationButton" class="button">Stop Rotation</button><button id="resetButton" class="button">Reset</button>
+        </div>
+        <!-- DOM -->
+        <div id="div_dom">
+            <hr>
+            <h2>Creations whith DOM</h2>
+            Write a message:<input class="inputs" type="text" id="texto_input">
+            <br>
+            <button id="createDomButton" class="button">Create div</button> <button id="deleteDomButton" class="button">Delete the oldest div</button>
+        </div>
+        <div id="div_events">
+            <hr>
+            <h2>Events</h2>
+            <!-- Agrupador de columnas -->
+            <div id="contenedor_eventos">
+                <!-- Cat -->
+                <div id="contenedor_gif">
+                    <h3 id="event_mouse_on">Put your mouse on the cat!</h3>
+                    <figure>
+                        <img class="imgCat" src="img/mouse_on_out/catNoGif.jpg" alt="cat" width="200px" height="200px">
+                    </figure>
+                </div>
+                <!-- Dog -->
+                <div id="contenedor_clicks">
+                    <h3 id="title_clicks">Try clicking once!</h3>
+                    <figure>
+                        <img id="imgDog" src="img/click_double_onClick/no_click.jpg" alt="dog" width="200px" height="200px">
+                    </figure>
+                </div>
+            </div>
         </div>
     </div>
 </body>

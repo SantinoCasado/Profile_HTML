@@ -22,8 +22,25 @@ const error = document.getElementById("error");
 //While
 const startRotationButton = document.getElementById("startRotationButton");
 const stopRotationButton = document.getElementById("stopRotationButton");
+const resetButton = document.getElementById("resetButton");
 const img = document.querySelector(".imgLinux");
 
+//Dom
+const createDomButton = document.getElementById("createDomButton");
+const deleteDomButton = document.getElementById("deleteDomButton");
+
+
+//Events
+const div_events = document.getElementById("div_eventos");
+
+//Cat
+const contenedor_gif = document.getElementById("contenedor_gif");
+const imgCat = document.querySelector(".imgCat");
+const messageCat = document.getElementById("event_mouse_on");
+//Dog
+const contenedor_clicks = document.getElementById("contenedor_clicks");
+const imgDog = document.getElementById("imgDog");
+const messageDog = document.getElementById("title_clicks");
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
 //Funcion que chequea el tipo de dato
@@ -196,7 +213,7 @@ createTableButton.addEventListener("click", function(event){
     let tableContent = "";
 
     if (!isValidPositiveInteger(widthInput) || !isValidPositiveInteger(lengthInput)) {
-        error.innerHTML = "Ingresá solo números enteros positivos.";
+        error.innerHTML = "Only positive integers.";
         return;
     }else{
         error.innerHTML = ""
@@ -230,7 +247,7 @@ changePositionButton.addEventListener("click", function(event){
     const yInput = document.getElementById("y_position").value.trim();
 
     if (!isValidPositiveInteger(xInput) || !isValidPositiveInteger(yInput)) {
-        error.innerHTML = "Coordenadas inválidas.";
+        error.innerHTML = "Invalid coordinates.";
         return;
     }
 
@@ -240,7 +257,7 @@ changePositionButton.addEventListener("click", function(event){
 
     // Validar si la posición está dentro del rango
     if (y >= tableArray.length || x >= tableArray[0].length) {
-        error.innerHTML = "La posición está fuera de la tabla.";
+        error.innerHTML = "Those coordinates are out of range.";
         return;
     }else{
         error.innerHTML = ""
@@ -289,3 +306,119 @@ stopRotationButton.addEventListener("click", function () {
     rotating = false;
 });
 
+resetButton.addEventListener("click", function(){
+    rotationAngle = 0;
+    img.style.transform = `rotate(${rotationAngle})`; // Restablece visualmente la rotación
+});
+
+//--------------------------------------------------------------------------------------------------------------------------------
+//DOM
+createDomButton.addEventListener("click", function () {
+    const contenedor = document.getElementById("div_dom");
+    const messageInput = document.getElementById("texto_input");
+
+    const newDIV = document.createElement("div");
+    newDIV.id = "divgenerado";
+
+    const pMensaje = document.createElement("p");
+    const pDescripcion = document.createElement("p");
+
+    // Acceder correctamente al valor del input
+    if (messageInput.value.trim() === "") {
+        pMensaje.innerText = "Empty";
+    } else {
+        pMensaje.innerText = messageInput.value;
+    }
+
+    pDescripcion.innerText = "I'm a div created by the DOM of JavaScript";
+
+    pMensaje.style.color = "yellow"
+    newDIV.style.padding = "5px";
+    newDIV.style.margin = "10px 0";
+    newDIV.style.backgroundColor = "#f0f0f018";
+
+    newDIV.appendChild(pMensaje);
+    newDIV.appendChild(pDescripcion);
+    contenedor.appendChild(newDIV);
+});
+
+deleteDomButton.addEventListener("click", function () {
+    const tarjeta = document.getElementById("divgenerado");
+    if (tarjeta) {
+        tarjeta.remove();
+    }
+});
+
+
+//Events
+//Mouse on the cat
+contenedor_gif.addEventListener("mouseover", () => {
+    messageCat.innerHTML = "uiia uiia uiia 😼🎶";
+    imgCat.src = "img/mouse_on_out/oiiaoiia.gif"; // Usás tu nuevo GIF acá
+});
+
+
+contenedor_gif.addEventListener("mouseout", () => {
+    messageCat.innerHTML = "Put your mouse on the cat!";
+    imgCat.src = "img/mouse_on_out/CatNoGif.jpg"
+});
+
+//Clicks
+let estadoInteraccion = "inicial"; // "inicial" → "clickeado" → "manteniendo"
+
+contenedor_clicks.addEventListener("click", () => {
+    if (estadoInteraccion === "manteniendo") return; // evitamos el doble efecto
+
+    estadoInteraccion = "clickeado";
+
+    messageDog.innerHTML = "oof!(hello!)";
+    imgDog.src = "img/click_double_onClick/one_click.jpg";
+
+    limpiarMensajes();
+
+    if (!document.getElementById("pMensajeClick")) {
+        const pMensaje = document.createElement("p");
+        pMensaje.id = "pMensajeClick";
+        pMensaje.innerText = "Now try to hold it!";
+        contenedor_clicks.appendChild(pMensaje);
+    }
+});
+
+contenedor_clicks.addEventListener("mousedown", () => {
+    if (estadoInteraccion !== "clickeado") return; // sólo se puede mantener tras un clic previo
+
+    estadoInteraccion = "manteniendo";
+
+    messageDog.innerHTML = "oof";
+    imgDog.src = "img/click_double_onClick/on_mouse_down.webp";
+
+    limpiarMensajes();
+
+    if (!document.getElementById("pMensajeHold")) {
+        const pMensaje = document.createElement("p");
+        pMensaje.id = "pMensajeHold";
+        pMensaje.innerText = "I think he wants to rest";
+        contenedor_clicks.appendChild(pMensaje);
+    }
+});
+
+contenedor_clicks.addEventListener("mouseup", () => {
+    if (estadoInteraccion === "manteniendo") {
+        messageDog.innerHTML = "He is ready now!";
+        imgDog.src = "img/click_double_onClick/no_click.jpg";
+        
+        limpiarMensajes()
+
+        setTimeout(() => {
+        estadoInteraccion = "inicial"; // volvemos al comienzo
+        }, 150);
+    }
+});
+
+// Limpieza de mensajes
+function limpiarMensajes() {
+    const msgClick = document.getElementById("pMensajeClick");
+    const msgHold = document.getElementById("pMensajeHold");
+    if (msgClick) msgClick.remove();
+    if (msgHold) msgHold.remove();
+}
