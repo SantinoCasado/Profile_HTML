@@ -90,3 +90,79 @@ if(comparador1 > comparador2){
 }else{
     mensaje += "<p> El comparador 2 es mayor que el comparador 1"
 }
+
+//Bucles
+//For
+function ejecutarFor(){
+  const input = parseInt(document.getElementById("inputFor").value);
+  const etiqueta = document.getElementById("resultadoFor");
+  etiqueta.innerHTML = '';
+
+  for(let i=1; i <= input;i++){
+    etiqueta.innerHTML += `Este es el ciclo N°: ${i} <br>`; 
+  }
+}
+//While
+function iniciarWhile(){
+  let contador = 1;
+  const input = parseInt(document.getElementById("inputWhile").value);
+  const etiqueta = document.getElementById("resultadoWhile");
+  etiqueta.innerHTML = '';
+  contador = 1;
+
+  intervalo = setInterval(() => {
+    if(contador <= input){
+      etiqueta.innerHTML += `| ${contador}`;
+      contador++;
+    }else{
+      clearInterval(intervalo);
+    }
+  }, 2000);
+}
+
+function detenerWhile(){
+  clearInterval(intervalo);
+}
+
+//Archivos
+//Json
+// Traer informacion, primer forma
+async function traermisCursos() {   //permite usar await para manejar tareas que toman tiempo (como traer datos de un archivo).
+    //espera a que la respuesta llegue antes de segui
+    await fetch('api.json')   //Solicita el archivo api.json usando fetch.
+    .then(respuesta => respuesta.json())    //Convierte la respuesta a formato JSON para que se pueda manipular en JavaScript.
+    .then(data =>{          //Una vez que tenemos los datos en formato JSON (suponiendo que es un array de cursos), se ejecuta la lógica para mostrarlos.
+    const etiqueta = document.getElementById("resultadoFunciones"); //Busca en el DOM el elemento donde se van a mostrar los resultados.
+    etiqueta.innerHTML ="";     //Limpia cualquier contenido previo en ese elemento.
+
+    data.forEach(curso => {     //Recorre cada objeto curso dentro del array y crea un nuevo párrafo con su contenido.
+      const p = document.createElement('p');    //Crea un elemento HTML <p> para cada curso.¿
+      p.innerText = `${curso.id}:${curso.titulo} - Temas: ${curso.temas}`;      //Inserta el texto con la información del curso (usando Template Literals).
+      etiqueta.appendChild(p);  //- Agrega el párrafo al elemento resultadoFunciones.
+    });
+  })
+  .catch(error => { //- Si ocurre cualquier error en el proceso (por ejemplo, no se encuentra api.json), muestra un mensaje en pantalla.
+    etiqueta.innerText = "Error al cargar los datos";
+  });
+}
+
+//Segunda forma
+async function traermisCursos() {
+  try {
+    const respuesta = await fetch('api.json');
+    const data = await respuesta.json();
+    
+    const etiqueta = document.getElementById("resultadoFunciones");
+    etiqueta.innerHTML = "";
+
+    data.forEach(curso => {
+      const p = document.createElement('p');
+      p.innerText = `${curso.id}: ${curso.titulo} - Temas: ${curso.temas}`;
+      etiqueta.appendChild(p);
+    });
+  } catch (error) {
+    const etiqueta = document.getElementById("resultadoFunciones");
+    etiqueta.innerText = "Error al cargar los datos";
+    console.error("Hubo un problema al traer los cursos:", error);
+  }
+}
