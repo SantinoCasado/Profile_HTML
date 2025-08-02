@@ -364,7 +364,7 @@ contenedor_gif.addEventListener("mouseover", () => {
 
 contenedor_gif.addEventListener("mouseout", () => {
     messageCat.innerHTML = "Put your mouse on the cat!";
-    imgCat.src = "img/mouse_on_out/CatNoGif.jpg"
+    imgCat.src = "img/mouse_on_out/catNoGif.jpg"
 });
 
 //Clicks
