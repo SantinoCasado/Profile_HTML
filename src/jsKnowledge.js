@@ -41,6 +41,10 @@ const messageCat = document.getElementById("event_mouse_on");
 const contenedor_clicks = document.getElementById("contenedor_clicks");
 const imgDog = document.getElementById("imgDog");
 const messageDog = document.getElementById("title_clicks");
+//Mole
+const contenedor_clicks_keyboard = document.getElementById("contenedor_clicks_keyboard");
+const imgMole = document.getElementById("imgMole");
+const messageMole = document.getElementById("title_clicksKeyboard");
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
 //Funcion que chequea el tipo de dato
@@ -422,3 +426,15 @@ function limpiarMensajes() {
     if (msgClick) msgClick.remove();
     if (msgHold) msgHold.remove();
 }
+
+//Click any key, Mole
+
+document.addEventListener("keydown", () => {
+    messageMole.innerHTML = "OUCH, what the hell man???";
+    imgMole.src = "img/click_keyboard/mole_clicked.png";
+});
+
+document.addEventListener("keyup", () => {
+    messageMole.innerHTML = "Why did you do that??";
+    imgMole.src = "img/click_keyboard/mole_afterClick.png";
+});
