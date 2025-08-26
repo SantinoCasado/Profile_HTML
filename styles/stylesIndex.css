@@ -10,7 +10,6 @@
   width: 80%;
 }
 
-
 .titulo {
   font-weight: bold;
   font-size: 1.2em;
@@ -30,11 +29,10 @@
   height: 60px;
   position: fixed;
   background-color: rgba(127, 255, 212, 0.205);
-  
-  .a_nav{
+
+  .a_nav {
     color: white;
     text-decoration: none;
-
 
     font-weight: bold;
     font-family: "Source Code Pro", monospace;
@@ -44,13 +42,13 @@
   }
 
   .a_nav:hover {
-  text-decoration: underline;
-  color: white;
+    text-decoration: underline;
+    color: white;
   }
 }
 
-#home1:hover{
-  h3{
+#home1:hover {
+  h3 {
     /*
     - rotate3d(1, 1, 1, 10deg): rota el elemento 10 grados 
     alrededor del eje definido por (x=1, y=1, z=1), 
@@ -62,8 +60,8 @@
   }
 }
 
-#home2:hover{
-  h3{
+#home2:hover {
+  h3 {
     transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
   }
 }
@@ -75,7 +73,7 @@
     display: inline-block;
   }
 
-  a:hover{
+  a:hover {
     transform: scale(1.1);
     font-weight: bold;
   }
@@ -84,7 +82,7 @@
   grid-template-columns: 4fr 4fr;
   grid-template-rows: 4fr 2fr;
 
-  h3{
+  h3 {
     /* 
     - transform: propiedad que será animada (por ejemplo, scale, translate, rotate, etc.).
     - 0.5s: duración de la transición.
@@ -105,11 +103,17 @@
       list-style-position: inside;
     }
     /*Animacion de items*/
-    .item1, .item2, .item3, .item4{
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
       transition: background-color 0.4s ease, transform 0.6s ease-in-out;
     }
-    
-    .item1:hover, .item2:hover, .item3:hover, .item4:hover{
+
+    .item1:hover,
+    .item2:hover,
+    .item3:hover,
+    .item4:hover {
       color: rgba(255, 0, 0, 0.562);
       font-weight: bold;
       transform: translateX(-30px) scale(1.1);
@@ -127,11 +131,17 @@
       list-style-position: inside;
     }
     /*Animacion de items*/
-    .item1, .item2, .item3, .item4{
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
       transition: background-color 0.4s ease, transform 0.6s ease-in-out;
     }
-    
-    .item1:hover, .item2:hover, .item3:hover, .item4:hover{
+
+    .item1:hover,
+    .item2:hover,
+    .item3:hover,
+    .item4:hover {
       color: rgba(255, 0, 0, 0.562);
       font-weight: bold;
       transform: translateX(-30px) scale(1.1);
@@ -139,21 +149,21 @@
   }
 }
 
+#home1,
+#home2 {
+  background-color: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(173, 216, 230, 0.6); /* sombra celeste suave */
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
-  #home1, #home2 {
-    background-color: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 0 15px rgba(173, 216, 230, 0.6); /* sombra celeste suave */
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column; /* orden vertical */
+  align-items: center; /* centra horizontalmente */
+  text-align: center; /* centra el texto */
 
-    display: flex;
-    flex-direction: column; /* orden vertical */
-    align-items: center; /* centra horizontalmente */
-    text-align: center; /* centra el texto */
-
-    animation: fadeIn 1s ease-out forwards;
-  }
+  animation: fadeIn 1s ease-out forwards;
+}
 
 #Description {
   font-family: "Source Code Pro", monospace;
@@ -176,19 +186,20 @@
   text-align: center;
 }
 
-
-#Links{
+#Links {
   display: flex;
   justify-content: center;
   gap: 100px;
   transition: transform 1s ease, transform 2s ease-in-out;
 
-  div{
-    .img1, .img2{
+  div {
+    .img1,
+    .img2 {
       transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
-    .img1:hover, .img2:hover{
+    .img1:hover,
+    .img2:hover {
       transform: scale(1.1);
       font-weight: bold;
     }
@@ -223,7 +234,7 @@
   }
 
   figure {
-    img {
+    .img {
       transition: transform 0.4s ease, transform 0.4s ease-in-out;
       display: inline-block;
       display: flex;
@@ -238,7 +249,7 @@
       animation: rotate 3s linear infinite;
     }
 
-    .img1:hover, .img2:hover, .img3:hover, .img4:hover{
+    .img:hover {
       transform: scale(1.1);
       font-weight: bold;
       animation: none;
@@ -279,7 +290,6 @@ h1 {
   color: rgba(216, 162, 27, 0.712);
 
   animation: glow 2.5s ease-in-out infinite;
-
 }
 
 h2 {
@@ -287,33 +297,33 @@ h2 {
   padding: 0;
 }
 
-footer{
+footer {
   width: 50%;
   padding: 20px;
   position: absolute;
 
-  textarea.inputs{
+  textarea.inputs {
     height: 5em;
     font-family: inherit;
   }
 
-  h2{
+  h2 {
     transition: transform 0.5s ease, transform 0.5s ease-in-out;
     margin-bottom: 20px;
   }
-  h2:hover{
+  h2:hover {
     transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
   }
 
-  .inputs{
+  .inputs {
     background-color: rgba(128, 128, 128, 0.39);
   }
 
-  input[type="submit"]:hover{
+  input[type="submit"]:hover {
     animation: pulse 0.8s ease-in-out;
   }
 
-  .inputs:hover{
+  .inputs:hover {
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); /* sombra dorada suave */
     transform: scale(1.01); /* leve agrandamiento del footer */
     transition: all 0.4s ease-in-out;
@@ -324,21 +334,20 @@ footer{
     border: 2px solid red;
   }
 
-
-  .inputs:focus:valid{
+  .inputs:focus:valid {
     background-color: rgba(0, 128, 0, 0.733);
   }
 
-  #inputButton{
-  margin: 15px;
-  height: 30px;
-  background-color: brown;
-  cursor: pointer;
-  width: 80%;
-  transition: transform 0.5s ease, transform 0.5s ease-in-out;
+  #inputButton {
+    margin: 15px;
+    height: 30px;
+    background-color: brown;
+    cursor: pointer;
+    width: 80%;
+    transition: transform 0.5s ease, transform 0.5s ease-in-out;
   }
 
-  #inputButton:hover{
+  #inputButton:hover {
     transform: scale(1.1);
     font-weight: bold;
   }
@@ -367,26 +376,38 @@ footer{
   }
 }
 
-@keyframes rotate{
-  0%{
+@keyframes rotate {
+  0% {
     transform: rotateY(odeg);
   }
-  50%{
+  50% {
     transform: rotateY(90deg);
   }
-  100%{
+  100% {
     transform: rotateY(0deg);
   }
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes glow {
-  0%   { text-shadow: 0 0 5px #00bcd4; }
-  50%  { text-shadow: 0 0 20px #00bcd4; }
-  100% { text-shadow: 0 0 5px #00bcd4; }
+  0% {
+    text-shadow: 0 0 5px #00bcd4;
+  }
+  50% {
+    text-shadow: 0 0 20px #00bcd4;
+  }
+  100% {
+    text-shadow: 0 0 5px #00bcd4;
+  }
 }
