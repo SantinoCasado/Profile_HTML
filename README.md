@@ -5,7 +5,7 @@
   </p>
 
   <h2>🔗 Link a la pagina web</h2>
-  <a> https://santinocasado.github.io/Profile_HTML/</a>
+  <a target="_blank" href="https://www.python.org"> https://santinocasado.github.io/Profile_HTML/</a>
 
   <h2>🚀 ¿Cómo visualizar el proyecto?</h2>
   <p>Para ejecutar correctamente el proyecto, solo se necesita un navegador moderno. A continuación, los pasos:</p>
