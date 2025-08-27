@@ -194,13 +194,16 @@ comparatorButton.addEventListener("click", function(event) {
     }
 
     // Comparación de mayor/menor
-    if (dato1 > dato2) {
+    const dato1Str = String(dato1);
+    const dato2Str = String(dato2);
+
+    if (dato1Str > dato2Str) {
         mensaje += "The first value is greater than the second.";
-    } else if (dato1 < dato2) {
+    } else if (dato1Str < dato2Str) {
         mensaje += "The second value is greater than the first.";
     } else {
         mensaje += "Both values are equal.";
-    }
+    } 
 
     resultComparator.innerHTML = mensaje;
 });

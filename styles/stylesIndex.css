@@ -1,242 +1,166 @@
-.ul_encabezado {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
+/* --- Reglas Generales y Reutilizables --- */
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-.inputs {
-  margin: 15px;
-  height: 30px;
-  width: 80%;
+h1 {
+  text-align: center;
+  color: #ffcc00;
+  animation: glow 2.5s ease-in-out infinite;
 }
 
-.titulo {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 8px;
-  height: 40px;
+
+h2{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: inherit;
+  color: #00bcd4;
+  text-align: center;
+  transition: transform 0.5s ease, transform 0.5s ease-in-out;
+  &:hover {
+    transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
+  }
 }
 
-.descripcion {
-  font-size: 0.9em;
-  color: #ccc;
-  margin-top: 5px;
-}
-
-#encabezado_nav {
-  top: 0;
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  background-color: rgba(127, 255, 212, 0.205);
-
+/* --- Sección del Encabezado (header) --- */
+header {
+  padding: 0;
+  #encabezado_nav {
+    top: 0;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.479);
+  }
+  .ul_encabezado {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
   .a_nav {
     color: white;
     text-decoration: none;
-
     font-weight: bold;
-    font-family: "Source Code Pro", monospace;
+    &:hover {
+      text-decoration: underline;
+      color: green;
+    }
+  }
+}
+
+/* --- Sección Principal (main) --- */
+main {
+  margin-top: 65px;
+  #Description,
+  #title-skills {
+    font-family: inherit;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
   }
-
-  .a_nav:hover {
-    text-decoration: underline;
-    color: white;
-  }
-}
-
-#home1:hover {
-  h3 {
-    /*
-    - rotate3d(1, 1, 1, 10deg): rota el elemento 10 grados 
-    alrededor del eje definido por (x=1, y=1, z=1), 
-    lo que genera una rotación en diagonal en el espacio 3D.
-    - scale(1.1): agranda el elemento un 10%, 
-    haciéndolo ligeramente más grande cuando se pasa el cursor por encima.
-    */
-    transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
-  }
-}
-
-#home2:hover {
-  h3 {
-    transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
-  }
-}
-
-#home {
-  a {
-    color: goldenrod;
-    transition: transform 0.4s ease, transform 0.4s ease-in-out;
-    display: inline-block;
-  }
-
-  a:hover {
-    transform: scale(1.1);
-    font-weight: bold;
-  }
-
-  display: grid;
-  grid-template-columns: 4fr 4fr;
-  grid-template-rows: 4fr 2fr;
-
-  h3 {
-    /* 
-    - transform: propiedad que será animada (por ejemplo, scale, translate, rotate, etc.).
-    - 0.5s: duración de la transición.
-    - ease: tipo de aceleración — empieza lento, acelera en el medio, termina lento.
-    - ease-in-out: otra curva de aceleración — empieza y termina lento.
-    */
-    transition: transform 0.5s ease, transform 0.5s ease-in-out;
-  }
-
-  #home1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin-top: 20px;
-    margin-left: 70px;
-    margin-right: 15px;
-    ul {
-      list-style-position: inside;
-      list-style-position: inside;
+  #home {
+    h3{
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: inherit;
+      color: #00bcd4;
+      text-align: center;
+      transition: transform 0.5s ease, transform 0.5s ease-in-out;
     }
-    /*Animacion de items*/
-    .item1,
-    .item2,
-    .item3,
-    .item4 {
-      transition: background-color 0.4s ease, transform 0.6s ease-in-out;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 4fr 2fr;
+    #home1,
+    #home2 {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(173, 216, 230, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1s ease-out forwards;
     }
-
-    .item1:hover,
-    .item2:hover,
-    .item3:hover,
-    .item4:hover {
-      color: rgba(255, 0, 0, 0.562);
-      font-weight: bold;
-      transform: translateX(-30px) scale(1.1);
+    #home1 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-top: 20px;
+      margin-left: 70px;
+      margin-right: 15px;
     }
-  }
-
-  #home2 {
-    grid-column: 2/2;
-    grid-row: 1/2;
-    margin-top: 20px;
-    margin-right: 70px;
-    margin-left: 15px;
-    ul {
-      list-style-position: inside;
-      list-style-position: inside;
+    #home2 {
+      grid-column: 2/2;
+      grid-row: 1/2;
+      margin-top: 20px;
+      margin-right: 70px;
+      margin-left: 15px;
     }
-    /*Animacion de items*/
-    .item1,
-    .item2,
-    .item3,
-    .item4 {
-      transition: background-color 0.4s ease, transform 0.6s ease-in-out;
-    }
-
-    .item1:hover,
-    .item2:hover,
-    .item3:hover,
-    .item4:hover {
-      color: rgba(255, 0, 0, 0.562);
-      font-weight: bold;
-      transform: translateX(-30px) scale(1.1);
-    }
-  }
-}
-
-#home1,
-#home2 {
-  background-color: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 0 15px rgba(173, 216, 230, 0.6); /* sombra celeste suave */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  display: flex;
-  flex-direction: column; /* orden vertical */
-  align-items: center; /* centra horizontalmente */
-  text-align: center; /* centra el texto */
-
-  animation: fadeIn 1s ease-out forwards;
-}
-
-#Description {
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-
-  text-align: center;
-  padding: 5pxs;
-}
-
-#title-skills {
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-#Links {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  transition: transform 1s ease, transform 2s ease-in-out;
-
-  div {
-    .img1,
-    .img2 {
-      transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    .img1:hover,
-    .img2:hover {
-      transform: scale(1.1);
-      font-weight: bold;
-    }
-  }
-}
-
-#div_programingSkills {
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 70px;
-  justify-content: center;
-  align-content: center;
-  width: 90%;
-  margin: 0 auto;
-  padding: 20px;
-
-  .skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 220px;
-    margin: 20px;
-
-    animation: slideInLeft 1.3s ease-out forwards;
-  }
-
-  figure {
-    .img {
+    a {
       transition: transform 0.4s ease, transform 0.4s ease-in-out;
       display: inline-block;
+      &:hover {
+        transform: scale(1.1);
+        font-weight: bold;
+      }
+    }
+    ul {
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+      li {
+        transition: color 0.4s ease, transform 0.6s ease-in-out;
+        &:hover {
+          color: rgba(255, 0, 0, 0.562);
+          font-weight: bold;
+          transform: translateX(-30px) scale(1.1);
+        }
+      }
+    }
+  }
+  #div_programingSkills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+    align-content: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 220px;
+      margin: 20px;
+      animation: slideInLeft 1.3s ease-out forwards;
+    }
+    .titulo {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+      height: 40px;
+    }
+    .descripcion {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 5px;
+    }
+    .img {
+      transition: transform 0.4s ease, transform 0.4s ease-in-out;
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -245,99 +169,78 @@
       border: white solid;
       border-radius: 25px;
       box-shadow: 6px 6px 8px white;
-
       animation: rotate 3s linear infinite;
-    }
-
-    .img:hover {
-      transform: scale(1.1);
-      font-weight: bold;
-      animation: none;
+      &:hover {
+        transform: scale(1.1);
+        font-weight: bold;
+        animation: none;
+      }
     }
   }
 }
 
-/* Estilo para todas las listas ordenadas */
-
-/*Personalizacion de las partes*/
-body {
-  margin: 0;
-  padding: 0;
-  color: white;
-  background-image: url("../img/background.svg");
-  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-  background-repeat: no-repeat; /* Evita que se repita */
-}
-
-header {
-  padding: 0;
-}
-
+/* --- Sección de Artículo (article) --- */
 article {
-  margin-top: 50px;
-  padding: 0;
-  text-align: center;
   h4 {
     font-family: "Times New Roman", Times, serif;
     font-size: 1rem;
     color: red;
+    margin-top: 50px;
+    padding: 0;
+    text-align: center;
+  }
+  #Links {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    transition: transform 1s ease, transform 2s ease-in-out;
+    .img1,
+    .img2 {
+      transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+      &:hover {
+        transform: scale(1.1);
+        font-weight: bold;
+      }
+    }
   }
 }
 
-/*Personalizacion de los "h"*/
-h1 {
-  text-align: center;
-  color: rgba(216, 162, 27, 0.712);
-
-  animation: glow 2.5s ease-in-out infinite;
-}
-
-h2 {
-  margin: 0;
-  padding: 0;
-}
-
+/* --- Sección del Pie de Página (footer) --- */
 footer {
   width: 50%;
   padding: 20px;
-  position: absolute;
-
+  h3 {
+    font-family: inherit;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    transition: transform 0.5s ease, transform 0.5s ease-in-out;
+    margin-bottom: 20px;
+  }
+  .inputs {
+    margin: 15px;
+    height: 30px;
+    width: 80%;
+    background-color: rgba(128, 128, 128, 0.39);
+    &:hover {
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+      transform: scale(1.01);
+      transition: all 0.4s ease-in-out;
+    }
+    &:focus {
+      &:invalid {
+        background-color: rgba(255, 0, 0, 0.37);
+        border: 2px solid red;
+      }
+      &:valid {
+        background-color: rgba(0, 128, 0, 0.733);
+      }
+    }
+  }
   textarea.inputs {
     height: 5em;
     font-family: inherit;
   }
-
-  h2 {
-    transition: transform 0.5s ease, transform 0.5s ease-in-out;
-    margin-bottom: 20px;
-  }
-  h2:hover {
-    transform: rotate3d(1, 1, 1, 10deg) scale(1.1);
-  }
-
-  .inputs {
-    background-color: rgba(128, 128, 128, 0.39);
-  }
-
-  input[type="submit"]:hover {
-    animation: pulse 0.8s ease-in-out;
-  }
-
-  .inputs:hover {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); /* sombra dorada suave */
-    transform: scale(1.01); /* leve agrandamiento del footer */
-    transition: all 0.4s ease-in-out;
-  }
-
-  .inputs:focus:invalid {
-    background-color: rgba(255, 0, 0, 0.37); /* Rojo suave */
-    border: 2px solid red;
-  }
-
-  .inputs:focus:valid {
-    background-color: rgba(0, 128, 0, 0.733);
-  }
-
   #inputButton {
     margin: 15px;
     height: 30px;
@@ -345,15 +248,14 @@ footer {
     cursor: pointer;
     width: 80%;
     transition: transform 0.5s ease, transform 0.5s ease-in-out;
-  }
-
-  #inputButton:hover {
-    transform: scale(1.1);
-    font-weight: bold;
+    &:hover {
+      transform: scale(1.1);
+      font-weight: bold;
+    }
   }
 }
 
-/* Aniamtions */
+/* --- Keyframes --- */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -378,7 +280,7 @@ footer {
 
 @keyframes rotate {
   0% {
-    transform: rotateY(odeg);
+    transform: rotateY(0deg);
   }
   50% {
     transform: rotateY(90deg);
@@ -403,11 +305,3 @@ footer {
 @keyframes glow {
   0% {
     text-shadow: 0 0 5px #00bcd4;
-  }
-  50% {
-    text-shadow: 0 0 20px #00bcd4;
-  }
-  100% {
-    text-shadow: 0 0 5px #00bcd4;
-  }
-}
