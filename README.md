@@ -1,11 +1,11 @@
 <body>
   <h1>🧑‍💻 Desarrollo de Perfil Interactivo y Showcase de JavaScript</h1>
-  <h2>🔗 Link a la pagina web</h2>
-  <a> https://santinocasado.github.io/Profile_HTML/</a>
-  <hr />
   <p>
     Este proyecto consiste en el diseño y desarrollo de una página web personal que presenta mi perfil profesional, habilidades técnicas y conocimientos prácticos en JavaScript. El objetivo fue aplicar conceptos de diseño responsivo, animaciones CSS, validaciones HTML y lógica de interacción con JavaScript puro, todo integrado en una experiencia visual clara y atractiva.
   </p>
+
+  <h2>🔗 Link a la pagina web</h2>
+  <a> https://santinocasado.github.io/Profile_HTML/</a>
 
   <h2>🚀 ¿Cómo visualizar el proyecto?</h2>
   <p>Para ejecutar correctamente el proyecto, solo se necesita un navegador moderno. A continuación, los pasos:</p>
