@@ -1,5 +1,6 @@
 <body>
   <h1>🧑‍💻 Desarrollo de Perfil Interactivo y Showcase de JavaScript</h1>
+  <h2>🔗 Link a la pagina web</h2>
   <a> https://santinocasado.github.io/Profile_HTML/</a>
   <hr />
   <p>
