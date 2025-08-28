@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/background/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Source Code Pro", monospace;

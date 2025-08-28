@@ -141,7 +141,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/background/background.jpg");
   background-size: cover; /* Hace que la imagen cubra toda la pantalla */
   background-repeat: no-repeat; /* Evita que se repita */
 }

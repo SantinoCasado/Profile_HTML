@@ -1,133 +1,176 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/stylesJsKnowledge.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/stylesJsKnowledge.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="src/jsKnowledge.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav id="encabezado_nav">
-            <ul id="ul_encabezado">
-                <li><a class="a_nav" href="index.html">Inicio</a></li>
-            </ul>
-        </nav>
+      <nav id="encabezado_nav">
+        <ul id="ul_encabezado">
+          <li><a class="a_nav" href="index.html">Inicio</a></li>
+        </ul>
+      </nav>
     </header>
-    <main style="margin-top: 65px;">
-        <h1>My Java Script Knowledge</h1>
-    <div id="JsExamples">
+    <main style="margin-top: 65px">
+      <h1>My Java Script Knowledge</h1>
+      <div id="JsExamples">
         <!-- DataType -->
         <div id="div_dataType">
-            <hr>
-            <h2>Data Type</h2>
-            <label for="data">First data</label>
-            <input class="inputs" type="text" id="dato1_value">
-            <br>
-            <label for="data">Second data</label>
-            <input class="inputs" type="text" id="dato2_value">
-            <br>
-            <button id="inputButton" class="button">Check type of data</button>
-            <br>
-            <p id="datatype_practice">The first data is: <br>The second data is:</p>
+          <hr />
+          <h2>Data Type</h2>
+          <label for="data">First data</label>
+          <input class="inputs" type="text" id="dato1_value" />
+          <br />
+          <label for="data">Second data</label>
+          <input class="inputs" type="text" id="dato2_value" />
+          <br />
+          <button id="inputButton" class="button">Check type of data</button>
+          <br />
+          <p id="datatype_practice">
+            The first data is: <br />The second data is:
+          </p>
         </div>
         <!-- Calculadora -->
         <div id="div_calculadora">
-            <hr>
-            <h2>Calculator</h2>
-            <label for="data">First number</label>
-            <input class="inputs" type="text" id="number1">
-            <br>
-            <label for="data">Second number</label>
-            <input class="inputs" type="text" id="number2">
-            <br>
-            <button id="plusButton" class="button">Plus</button>
-            <button id="minusButton" class="button">Minus</button>
-            <button id="timesButton" class="button">Times</button>
-            <button id="dividedButton" class="button">Divided</button>
-            <br>
-            <p id="result">The result is: </p>
+          <hr />
+          <h2>Calculator</h2>
+          <label for="data">First number</label>
+          <input class="inputs" type="text" id="number1" />
+          <br />
+          <label for="data">Second number</label>
+          <input class="inputs" type="text" id="number2" />
+          <br />
+          <button id="plusButton" class="button">Plus</button>
+          <button id="minusButton" class="button">Minus</button>
+          <button id="timesButton" class="button">Times</button>
+          <button id="dividedButton" class="button">Divided</button>
+          <br />
+          <p id="result">The result is:</p>
         </div>
         <!-- Comparator -->
         <div id="div_comparator">
-            <hr>
-            <h2>Data Comparator</h2>
-            <label for="data">First one</label>
-            <input class="inputs" type="text" id="comparador1">
-            <br>
-            <label for="data">Second one</label>
-            <input class="inputs" type="text" id="comparador2">
-            <br>
-            <button id="comparatorButton" class="button">Compare data</button>
-            <br>
-            <p id="resultComparator">Do the two have the same values? <br>Are the same type? <br> Are they strictly the same? <br> Who is greater?</p>
+          <hr />
+          <h2>Data Comparator</h2>
+          <label for="data">First one</label>
+          <input class="inputs" type="text" id="comparador1" />
+          <br />
+          <label for="data">Second one</label>
+          <input class="inputs" type="text" id="comparador2" />
+          <br />
+          <button id="comparatorButton" class="button">Compare data</button>
+          <br />
+          <p id="resultComparator">
+            Do the two have the same values? <br />Are the same type? <br />
+            Are they strictly the same? <br />
+            Who is greater?
+          </p>
         </div>
         <!-- Table Flex -->
-            <div id="div_for">
-            <hr>
-            <h2>Table Flex</h2>
-            <label for="data">width</label>
-            <input class="inputs" type="text" id="width">
-            <br>
-            <label for="data">length</label>
-            <input class="inputs" type="text" id="length">
-            <br>
-            <button id="createTableButton" class="button">Create Table</button>
-            <br>
-            X:<input class="inputs" type="text" id="x_position"> Y: <input class="inputs" type="text" id="y_position">
-            <button id="changePositionButton" class="button">Change positions</button>
-            <p id="table"></p>
-            <p id="error"></p>
+        <div id="div_for">
+          <hr />
+          <h2>Table Flex</h2>
+          <label for="data">width</label>
+          <input class="inputs" type="text" id="width" />
+          <br />
+          <label for="data">length</label>
+          <input class="inputs" type="text" id="length" />
+          <br />
+          <button id="createTableButton" class="button">Create Table</button>
+          <br />
+          X:<input class="inputs" type="text" id="x_position" /> Y:
+          <input class="inputs" type="text" id="y_position" />
+          <button id="changePositionButton" class="button">
+            Change positions
+          </button>
+          <p id="table"></p>
+          <p id="error"></p>
         </div>
         <!-- Rotate image -->
         <div id="div_rotateImg">
-            <hr>
-            <h2>Rotate image</h2>
-            <figure>
-                <img class="imgLinux" src="img/linux.png" alt="logo linux" width="200px" height="200px">
-            </figure>
-            <br>
-            <button id="startRotationButton" class="button">Start rotation</button> <button id="stopRotationButton" class="button">Stop Rotation</button><button id="resetButton" class="button">Reset</button>
+          <hr />
+          <h2>Rotate image</h2>
+          <figure>
+            <img
+              class="imgLinux"
+              src="img/others/linux.png"
+              alt="logo linux"
+              width="200px"
+              height="200px"
+            />
+          </figure>
+          <br />
+          <button id="startRotationButton" class="button">
+            Start rotation
+          </button>
+          <button id="stopRotationButton" class="button">Stop Rotation</button>
+          <button id="resetButton" class="button">Reset</button>
         </div>
         <!-- DOM -->
         <div id="div_dom">
-            <hr>
-            <h2>Creations whith DOM</h2>
-            Write a message:<input class="inputs" type="text" id="texto_input">
-            <br>
-            <button id="createDomButton" class="button">Create div</button> <button id="deleteDomButton" class="button">Delete the oldest div</button>
+          <hr />
+          <h2>Creations whith DOM</h2>
+          Write a message:<input class="inputs" type="text" id="texto_input" />
+          <br />
+          <button id="createDomButton" class="button">Create div</button>
+          <button id="deleteDomButton" class="button">
+            Delete the oldest div
+          </button>
         </div>
         <div id="div_events">
-            <hr>
-            <h2>Events</h2>
-            <!-- Agrupador de columnas -->
-            <div id="contenedor_eventos">
-                <!-- Cat -->
-                <div id="contenedor_gif">
-                    <h3 id="event_mouse_on">Put your mouse on the cat!</h3>
-                    <figure>
-                        <img class="imgCat" src="img/mouse_on_out/catNoGif.jpg" alt="cat" width="200px" height="200px">
-                    </figure>
-                </div>
-                <!-- Dog -->
-                <div id="contenedor_clicks">
-                    <h3 id="title_clicks">Try clicking once!</h3>
-                    <figure>
-                        <img id="imgDog" src="img/click_double_onClick/no_click.jpg" alt="dog" width="200px" height="200px">
-                    </figure>
-                </div>
-                <!-- Mole -->
-                <div id="contenedor_clicks_keyboard">
-                    <h3 id="title_clicksKeyboard">The mole: Hello! (press any key)</h3>
-                    <figure>
-                        <img id="imgMole" src="img/click_keyboard/mole_noClick.png" alt="mole" width="200px" height="200px">
-                    </figure>
-                </div>
+          <hr />
+          <h2>Events</h2>
+          <!-- Agrupador de columnas -->
+          <div id="contenedor_eventos">
+            <!-- Cat -->
+            <div id="contenedor_gif">
+              <h3 id="event_mouse_on">Put your mouse on the cat!</h3>
+              <figure>
+                <img
+                  class="imgCat"
+                  src="img/mouse_on_out/catNoGif.jpg"
+                  alt="cat"
+                  width="200px"
+                  height="200px"
+                />
+              </figure>
             </div>
+            <!-- Dog -->
+            <div id="contenedor_clicks">
+              <h3 id="title_clicks">Try clicking once!</h3>
+              <figure>
+                <img
+                  id="imgDog"
+                  src="img/click_double_onClick/no_click.jpg"
+                  alt="dog"
+                  width="200px"
+                  height="200px"
+                />
+              </figure>
+            </div>
+            <!-- Mole -->
+            <div id="contenedor_clicks_keyboard">
+              <h3 id="title_clicksKeyboard">
+                The mole: Hello! (press any key)
+              </h3>
+              <figure>
+                <img
+                  id="imgMole"
+                  src="img/click_keyboard/mole_noClick.png"
+                  alt="mole"
+                  width="200px"
+                  height="200px"
+                />
+              </figure>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
