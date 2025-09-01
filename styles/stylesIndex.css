@@ -1,4 +1,3 @@
-/* --- Reglas Generales y Reutilizables --- */
 body {
   margin: 0;
   padding: 0;
@@ -18,8 +17,7 @@ h1 {
   animation: glow 2.5s ease-in-out infinite;
 }
 
-
-h2{
+h2 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -34,27 +32,68 @@ h2{
 
 /* --- Sección del Encabezado (header) --- */
 header {
-  padding: 0;
-  #encabezado_nav {
-    top: 0;
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    background-color: rgba(128, 128, 128, 0.479);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(128, 128, 128, 0.479);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: top 0.3s ease;
+
+  nav {
+    display: flex; /* Se movió aquí */
+    align-items: center; /* Se movió aquí */
+    height: 100%; /* ¡Nuevo! Asegura que nav ocupe toda la altura del header. */
   }
+
   .ul_encabezado {
-    display: flex;
     list-style: none;
+    display: flex; /* Se mantiene aquí para el espaciado horizontal */
     justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Opcional, pero ayuda a la distribución */
   }
+
+  .nav_item {
+    position: relative;
+  }
+
   .a_nav {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    &:hover {
-      text-decoration: underline;
-      color: green;
-    }
+    padding: 20px;
+    display: block;
+  }
+
+  .a_nav:hover {
+    color: black;
+    text-decoration: underline;
+  }
+
+  /* Submenú oculto por defecto */
+  .submenu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  /* Mostrar submenú al hacer hover */
+  .nav_item:hover .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }
 
@@ -69,7 +108,7 @@ main {
     font-style: normal;
   }
   #home {
-    h3{
+    h3 {
       margin-bottom: 20px;
       text-align: center;
       font-family: inherit;
@@ -218,22 +257,35 @@ footer {
     margin-bottom: 20px;
   }
   .inputs {
+    all: unset;
+    padding: 15px;
     margin: 15px;
     height: 30px;
     width: 80%;
     background-color: rgba(128, 128, 128, 0.39);
+    border-radius: 12px;
+    border: 0px 2px 2px 2px rgba(0, 0, 0, 0.4);
+    transition: border 0.3s ease-in-out;
     &:hover {
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
       transform: scale(1.01);
       transition: all 0.4s ease-in-out;
     }
-    &:focus {
-      &:invalid {
-        background-color: rgba(255, 0, 0, 0.37);
-        border: 2px solid red;
+    .input-error {
+      border: 2px solid red;
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+
+    .input-valid {
+      border: 2px solid green;
+      box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+    }
+    .inputs:focus {
+      .inputs:invalid {
+        border-color: 2px solid red;
       }
-      &:valid {
-        background-color: rgba(0, 128, 0, 0.733);
+      .inputs:valid {
+        border-color: rgba(0, 128, 0, 0.733);
       }
     }
   }
@@ -305,3 +357,5 @@ footer {
 @keyframes glow {
   0% {
     text-shadow: 0 0 5px #00bcd4;
+  }
+}
