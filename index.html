@@ -20,18 +20,6 @@
     <script src="src/profileScripts.js" defer></script>
   </head>
   <body>
-    <picture>
-      <source
-        media="(min-width: 768px)"
-        srcset="../img/background/background-desktop.jpg"
-      />
-      <source srcset="../img/background/background-mobile.jpg" />
-      <img
-        class="background-img"
-        src="../img/background/background.jpg"
-        alt="background image"
-      />
-    </picture>
     <header id="encabezado_nav">
       <nav>
         <ul class="ul_encabezado">
@@ -105,192 +93,189 @@
         </div>
       </div>
 
-      <h2 id="title-skills">My Programming Skills</h2>
+      <h2 id="title-skills">MY SKILLS</h2>
       <div id="div_programingSkills">
-        <div class="skill-item">
-          <figcaption class="titulo">Python - Intermediate</figcaption>
-          <a
-            target="_blank"
-            href="https://www.python.org"
-            onclick="showAlertSkills('Python')"
-          >
-            <figure>
-              <img
-                class="img"
-                src="./img/skills/python.svg"
-                alt="logo python"
-                width="200px"
-                height="100px"
-              />
-            </figure>
-          </a>
-          <figcaption class="descripcion">
-            A high-level, general-purpose programming language.
-          </figcaption>
-        </div>
+        <div id="carousel-track" class="carousel-track">
+          <!-- Items will be duplicated here by JavaScript for the infinite loop -->
+          <!-- Python -->
+          <div class="skill-item">
+            <a
+              target="_blank"
+              href="https://www.python.org"
+              onclick="showAlertSkills('Python')"
+            >
+              <figure>
+                <img
+                  class="img"
+                  src="img/skills/python.svg"
+                  alt="logo python"
+                />
+              </figure>
+            </a>
+            <figcaption class="titulo">Python</figcaption>
+            <div class="dropdown-menu">
+              <p>
+                <strong>Level</strong> <br />
+                Intermediate
+              </p>
+            </div>
+          </div>
 
-        <div class="skill-item">
-          <figcaption class="titulo">Java - Intermediate</figcaption>
-          <a
-            target="_blank"
-            href="https://www.java.com/es/download/manual.jsp"
-            onclick="showAlertSkills('Java')"
-          >
-            <figure>
-              <img
-                class="img"
-                src="./img/skills/java.svg"
-                alt="logo java"
-                width="200px"
-                height="100px"
-              />
-            </figure>
-          </a>
-          <figcaption>
-            A high-level, general-purpose, memory-safe, object-oriented
-            programming language.
-          </figcaption>
-        </div>
+          <!-- Java -->
+          <div class="skill-item">
+            <a
+              target="_blank"
+              href="https://www.java.com/es/download/manual.jsp"
+              onclick="showAlertSkills('Java')"
+            >
+              <figure>
+                <img class="img" src="img/skills/java.svg" alt="logo java" />
+              </figure>
+            </a>
+            <figcaption class="titulo">Java</figcaption>
+            <div class="dropdown-menu">
+              <p>
+                <strong>Level</strong> <br />
+                Intermediate
+              </p>
+            </div>
+          </div>
 
-        <div class="skill-item">
-          <figcaption class="titulo">
-            Git Bash - Beginner/Intermediate
-          </figcaption>
-          <a
-            target="_blank"
-            href="https://git-scm.com/book/en/v2/Appendix-A:-Git-in-Other-Environments-Git-in-Bash"
-            onclick="showAlertSkills('gitBash')"
-          >
-            <figure>
-              <img
-                class="img"
-                src="./img/skills/gitBash.svg"
-                alt="logo hitBash"
-                width="200px"
-                height="100px"
-              />
-            </figure>
-          </a>
-          <figcaption>
-            Provides an emulation layer for a Git command line experience.
-          </figcaption>
-        </div>
+          <!-- GitBash -->
+          <div class="skill-item">
+            <a
+              target="_blank"
+              href="https://git-scm.com/book/en/v2/Appendix-A:-Git-in-Other-Environments-Git-in-Bash"
+              onclick="showAlertSkills('gitBash')"
+            >
+              <figure>
+                <img
+                  class="img"
+                  src="img/skills/gitBash.svg"
+                  alt="logo git bash"
+                />
+              </figure>
+            </a>
+            <figcaption class="titulo">Git Bash</figcaption>
+            <div class="dropdown-menu">
+              <p>
+                <strong>Level</strong> <br />
+                Beginner/Intermediate
+              </p>
+            </div>
+          </div>
 
-        <div class="skill-item">
-          <figcaption class="titulo">MySQL - Intermediate</figcaption>
-          <a
-            target="_blank"
-            href="https://www.mysql.com"
-            onclick="showAlertSkills('MySQL')"
-          >
-            <figure>
-              <img
-                class="img"
-                src="./img/skills/MySQL.svg"
-                alt="logo MySQL"
-                width="200px"
-                height="100px"
-              />
-            </figure>
-          </a>
-          <figcaption>
-            It is an open-source relational database management system (RDBMS)
-            that uses the SQL language.
-          </figcaption>
-        </div>
+          <!-- My SQL -->
+          <div class="skill-item">
+            <a
+              target="_blank"
+              href="https://www.mysql.com"
+              onclick="showAlertSkills('MySQL')"
+            >
+              <figure>
+                <img class="img" src="img/skills/MySQL.svg" alt="logo MySQL" />
+              </figure>
+            </a>
+            <figcaption class="titulo">MySQL</figcaption>
+            <div class="dropdown-menu">
+              <p>
+                <strong>Level</strong> <br />
+                Intermediate
+              </p>
+            </div>
+          </div>
 
-        <div class="skill-item">
-          <figcaption class="titulo">HTML - Beginner/Intermediate</figcaption>
-          <a
-            target="_blank"
-            href="https://developer.mozilla.org/es/docs/Web/HTML"
-            onclick="showAlertSkills('HTML')"
-          >
-            <figure>
-              <img
-                class="img"
-                src="./img/skills/HTML_logo.svg"
-                alt="logo HTML"
-                width="200px"
-                height="100px"
-              />
-            </figure>
-          </a>
-          <figcaption>
-            It is a markup language used to create and structure the content of
-            web pages and web applications.
-          </figcaption>
-        </div>
+          <!-- HTML -->
+          <div class="skill-item">
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/es/docs/Web/HTML"
+              onclick="showAlertSkills('HTML')"
+            >
+              <figure>
+                <img
+                  class="img"
+                  src="img/skills/HTML_logo.svg"
+                  alt="logo HTML"
+                />
+              </figure>
+            </a>
+            <figcaption class="titulo">HTML</figcaption>
+            <div class="dropdown-menu">
+              <p>
+                <strong>Level</strong> <br />
+                Beginner/Intermediate
+              </p>
+            </div>
+          </div>
 
-        <div class="skill-item">
-          <figcaption class="titulo">CSS - Beginner/Intermediate</figcaption>
-          <a
-            target="_blank"
-            href="https://developer.mozilla.org/es/docs/Web/CSS"
-            onclick="showAlertSkills('CSS')"
-          >
-            <figure>
-              <img
-                class="img"
-                src="./img/skills/CSS_logo.svg"
-                alt="logo CSS"
-                width="200px"
-                height="100px"
-              />
-            </figure>
-          </a>
-          <figcaption>
-            CSS is the style setting language used to describe the presentation
-            of HTML or XML documents.
-          </figcaption>
-        </div>
+          <!-- CSS  -->
+          <div class="skill-item">
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/es/docs/Web/CSS"
+              onclick="showAlertSkills('CSS')"
+            >
+              <figure>
+                <img class="img" src="img/skills/CSS_logo.svg" alt="logo CSS" />
+              </figure>
+            </a>
+            <figcaption class="titulo">CSS</figcaption>
+            <div class="dropdown-menu">
+              <p>
+                <strong>Level</strong> <br />
+                Beginner/Intermediate
+              </p>
+            </div>
+          </div>
 
-        <div class="skill-item">
-          <figcaption class="titulo">
-            JavaScript - Beginner/Intermediate
-          </figcaption>
-          <a
-            target="_blank"
-            href="https://developer.mozilla.org/es/docs/Web/JavaScript"
-            onclick="showAlertSkills('JavaScript')"
-          >
-            <figure>
-              <img
-                class="img"
-                src="./img/skills/javascript_logo.svg"
-                alt="logo CSS"
-                width="200px"
-                height="100px"
-              />
-            </figure>
-          </a>
-          <figcaption>
-            It is a lightweight, interpreted or just-in-time compiled
-            programming language with first-class features.
-          </figcaption>
-        </div>
+          <!-- JavaScript -->
+          <div class="skill-item">
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/es/docs/Web/JavaScript"
+              onclick="showAlertSkills('JavaScript')"
+            >
+              <figure>
+                <img
+                  class="img"
+                  src="img/skills/javascript_logo.svg"
+                  alt="logo JavaScript"
+                />
+              </figure>
+            </a>
+            <figcaption class="titulo">JavaScript</figcaption>
+            <div class="dropdown-menu">
+              <p>
+                <strong>Level</strong> <br />
+                Beginner/Intermediate
+              </p>
+            </div>
+          </div>
 
-        <div class="skill-item">
-          <figcaption class="titulo">English - B2/C1</figcaption>
-          <a
-            target="_blank"
-            href="https://www.facebook.com/yesingleswilde"
-            onclick="showAlertSkills('Yes, I can')"
-          >
-            <figure>
-              <img
-                class="img"
-                src="./img/skills/ingles.svg"
-                alt="logo ingles"
-                width="200px"
-                height="100px"
-              />
-            </figure>
-          </a>
-          <figcaption>
-            West Germanic language originating in England and spread throughout
-            the world.
-          </figcaption>
+          <!-- English -->
+          <div class="skill-item">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/yesingleswilde"
+              onclick="showAlertSkills('Yes, I can')"
+            >
+              <figure>
+                <img
+                  class="img"
+                  src="img/skills/ingles.svg"
+                  alt="logo english"
+                />
+              </figure>
+            </a>
+            <figcaption class="titulo">English</figcaption>
+            <div class="dropdown-menu">
+              <p>
+                <strong>Level</strong> <br />
+                B2/C1
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>

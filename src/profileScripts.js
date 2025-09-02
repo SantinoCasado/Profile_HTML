@@ -116,4 +116,14 @@ function showAlertDownload(archive, event) {
 }
 
 //-----------------------------------------------------------------------------------------------------------------
-//Guardado de datos
+//Animacion skills
+document.addEventListener('DOMContentLoaded', () => {
+        const carouselTrack = document.getElementById('carousel-track');
+        const skillItems = Array.from(carouselTrack.children);
+
+        // Clonar los elementos para crear el bucle infinito
+        skillItems.forEach(item => {
+            const clone = item.cloneNode(true);
+            carouselTrack.appendChild(clone);
+        });
+});
