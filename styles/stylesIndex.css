@@ -294,11 +294,14 @@ article {
   #Links {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 70px;
+    padding-bottom: 30px;
     transition: transform 1s ease;
 
     .img1,
-    .img2 {
+    .img2,
+    .img3,
+    .img4 {
       transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
       &:hover {
         transform: scale(1.1);
